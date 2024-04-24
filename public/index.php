@@ -14,6 +14,7 @@ Router::add('GET', '/', HomeController::class, 'index');
 
 // USERCONTROLLER
 Router::add('GET', '/users/signup', UserController::class, 'signup');
+Router::add('POST', '/users/signup', UserController::class, 'postSignup');
 
 Router::add('GET', '/users/signin', UserController::class, 'signin');
 

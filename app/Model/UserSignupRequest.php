@@ -2,7 +2,7 @@
 
 namespace EsbiTest\Model;
 
-class UserRegisterRequest
+class UserSignupRequest
 {
     public ?string $username = null;
     public ?string $email = null;

@@ -15,7 +15,7 @@
         
         <?php if(isset($model['error'])) { ?>
             <div class="row">
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger p-2 m-0" role="alert">
                     <?= $model['error'] ?>
                 </div>
             </div>
@@ -27,7 +27,7 @@
   
             <div class="mb-3 d-flex align-items-center justify-content-center">
               <i class="fa-solid fa-user fa-2xl me-4 cpink"></i>
-              <input type="email" class="form-control w-75 p-3 rounded-pill" id="username" name="username" placeholder="Username">
+              <input type="text" class="form-control w-75 p-3 rounded-pill" id="username" name="username" placeholder="Username">
             </div>
   
             <div class="mb-3 d-flex align-items-center justify-content-center">
@@ -37,7 +37,7 @@
   
             <div class="mb-3 d-flex align-items-center justify-content-center">
               <i class="fa-solid fa-lock fa-2xl me-4 cpink"></i>
-              <input type="email" class="form-control w-75 p-3 rounded-pill" id="password" name="password" placeholder="Password">
+              <input type="password" class="form-control w-75 p-3 rounded-pill" id="password" name="password" placeholder="Password">
             </div>
   
           </div>
