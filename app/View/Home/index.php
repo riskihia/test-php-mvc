@@ -1,19 +1,41 @@
-<div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-        <div class="col-lg-7 text-center text-lg-start">
-            <h1 class="display-4 fw-bold lh-1 mb-3">Message | <?= $model['message'] ?? '' ?></h1>
-            <p class="col-lg-10 fs-4">by <a target="_blank" href="https://www.programmerzamannow.com/">Programmer Zaman
-                    Now</a></p>
+<div class="container-fuild vh-100 pink p-5">
+    <div class="row bg-white shadow h-100 p-5">
+      <div class="col position-relative">
+        <img src="http://localhost:8888/asset/image1.jpg" alt="people.jpg"
+            class="img-style ms-5 mt-2 position-absolute top-0 start-0 z-2">
+
+        <div class="square border border-3 position-absolute top-50 start-50 w-50 h-75 translate-middle z-0">
+          <p class="invisible">square</p>
         </div>
-        <div class="col-md-10 mx-auto col-lg-5">
-            <div class="p-4 p-md-5 border rounded-3 bg-light">
-                <div class="form-floating mb-3">
-                    <a href="/users/register" class="w-100 btn btn-lg btn-primary">Register</a>
-                </div>
-                <div class="form-floating mb-3">
-                    <a href="/users/login" class="w-100 btn btn-lg btn-primary">Login</a>
-                </div>
-            </div>
+
+        <img src="http://localhost:8888/asset/image2.jpg" alt="people.jpg" class="img-style mb-2 me-5 position-absolute bottom-0 end-0">
+      </div>
+      <div class="col">
+        <h1 class="text-center">Sign Up</h1>
+
+        <div class="d-flex flex-column my-4 ">
+
+          <div class="mb-3 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-user fa-2xl me-4 cpink"></i>
+            <input type="email" class="form-control w-75 p-3 rounded-pill" id="username" name="username" placeholder="Username">
+          </div>
+
+          <div class="mb-3 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-envelope fa-2xl me-4 cpink"></i>
+            <input type="email" class="form-control w-75 p-3 rounded-pill" id="email" name="email" placeholder="Email">
+          </div>
+
+          <div class="mb-3 d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-lock fa-2xl me-4 cpink"></i>
+            <input type="email" class="form-control w-75 p-3 rounded-pill" id="password" name="password" placeholder="Password">
+          </div>
+
         </div>
+        <div class="d-flex flex-row mt-2 justify-content-center align-items-center">
+        
+          <button type="button" class="btn dpink text-white inline text-center py-3 w-25 rounded-pill">SIGN UP</button>
+          <span class="ms-4">Already sign up? login here</span>
+        </div>
+      </div>
     </div>
 </div>
