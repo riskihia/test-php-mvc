@@ -16,11 +16,12 @@
 .dpink {
   background-color: #e75480;
 }
-.pink {
+.pink,
+.dpink:hover {
   background-color: pink;
 }
 
 .img-style {
-  width: 220px;
+  width: 212px;
   height: 280px;
 }

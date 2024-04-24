@@ -9,6 +9,7 @@ class HomeController
     function index()
     {
         View::render('Home/index', [
+            "title" => "Esbi | Sign Up",
             "message" => "HomePage Esbi Test"
         ]);
     }
