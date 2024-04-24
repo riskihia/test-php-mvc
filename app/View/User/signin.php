@@ -26,18 +26,13 @@
           <div class="d-flex flex-column my-4 ">
   
             <div class="mb-3 d-flex align-items-center justify-content-center">
-              <i class="fa-solid fa-user fa-2xl me-4 cpink"></i>
-              <input type="email" class="form-control w-75 p-3 rounded-pill" id="username" name="username" placeholder="Username">
-            </div>
-  
-            <div class="mb-3 d-flex align-items-center justify-content-center">
               <i class="fa-solid fa-envelope fa-2xl me-4 cpink"></i>
               <input type="email" class="form-control w-75 p-3 rounded-pill" id="email" name="email" placeholder="Email">
             </div>
   
             <div class="mb-3 d-flex align-items-center justify-content-center">
               <i class="fa-solid fa-lock fa-2xl me-4 cpink"></i>
-              <input type="email" class="form-control w-75 p-3 rounded-pill" id="password" name="password" placeholder="Password">
+              <input type="password" class="form-control w-75 p-3 rounded-pill" id="password" name="password" placeholder="Password">
             </div>
   
           </div>

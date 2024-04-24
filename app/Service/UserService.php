@@ -5,6 +5,8 @@ namespace EsbiTest\Service;
 use EsbiTest\Config\Database;
 use EsbiTest\Domain\User;
 use EsbiTest\Exception\ValidationException;
+use EsbiTest\Model\UserSigninRequest;
+use EsbiTest\Model\UserSigninResponse;
 use EsbiTest\Model\UserSignupRequest;
 use EsbiTest\Model\UserSignupResponse;
 use EsbiTest\Repository\UserRepository;
@@ -49,6 +51,32 @@ class UserService
         } catch (\Exception $exception) {
             Database::rollbackTransaction();
             throw $exception;
+        }
+    }
+
+    public function login(UserSigninRequest $request): UserSigninResponse
+    {
+        $this->validateUserLoginRequest($request);
+
+        $user = $this->userRepository->findByEmail($request->email);
+        if ($user == null) {
+            throw new ValidationException("Email or password is wrong");
+        }
+
+        if (password_verify($request->password, $user->password)) {
+            $response = new UserSigninResponse();
+            $response->user = $user;
+            return $response;
+        } else {
+            throw new ValidationException("Email or password is wrong");
+        }
+    }
+
+    private function validateUserLoginRequest(UserSigninRequest $request)
+    {
+        if ($request->email == null || $request->password == null ||
+            trim($request->email) == "" || trim($request->password) == "") {
+            throw new ValidationException("Email, Password can not blank");
         }
     }
 
