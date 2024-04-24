@@ -1,0 +1,19 @@
+{
+  "name": "riski-rahmat-hia/esbi-test-php-native-mvc",
+  "description": "Esbi test menggunakan php native dengan konsep MVC",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Riski Rahmat Hia",
+      "email": "riskirahmathia3@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}
